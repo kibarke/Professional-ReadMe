@@ -9,7 +9,7 @@ To make a quick and easy readme for this and future projects.
 ## Table of Contents
 
 - [Installation](#installation)
-- [Deployed Application URL] (#deployed)
+- [Deployed-Application-URL] (#deployed)
 - [Usage](#usage)
 - [Tests](#tests)
 - [Contributors](#contributors)
