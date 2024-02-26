@@ -40,9 +40,11 @@ ${data.description}
 ## Table of Contents
 
 - [Installation](#installation)
+- [Deployed Application URL] (#deployed)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [Tests](#tests)
+- [Contributors](#contributors)
+- [Screenshot](#screenshot)
 - [Questions](#questions)
 ${renderLicenseLink(data.license)}
 
@@ -50,17 +52,25 @@ ${renderLicenseLink(data.license)}
 
 ${data.installation}
 
+## Deployed Application URL
+
+${data.link}
+
 ## Usage
 
 ${data.usage}
 
-## Contributing
-
-${data.contributing}
-
 ## Tests
 
 ${data.tests}
+
+## Contributors
+
+${data.contributors}
+
+## Screenshot
+
+![alt-text](${data.screenshot})
 
 ## Questions
 
