@@ -1,7 +1,7 @@
 // Function to render license badge
 function renderLicenseBadge(license) {
-  if (license) {
-    return `[![License: ${license}](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})`;
+  if (license !== "none") {
+    return `[![GitHub License: ${license}](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})`;
   } else {
     return '';
   }
