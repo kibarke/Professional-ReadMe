@@ -54,7 +54,7 @@ ${data.installation}
 
 ## Deployed Application URL
 
-${data.link}
+${data.deployed}
 
 ## Usage
 
