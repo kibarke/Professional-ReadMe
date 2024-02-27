@@ -41,7 +41,7 @@ ${data.description}
 
 - [Installation](#installation)
 - [Deployed Application URL] (#deployed)
-- [Usage](#usage)
+- [Usage](#usa
 - [Tests](#tests)
 - [Contributors](#contributors)
 - [Screenshot](#screenshot)
