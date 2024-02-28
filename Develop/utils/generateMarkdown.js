@@ -40,8 +40,7 @@ ${data.description}
 ## Table of Contents
 
 - [Installation](#installation)
-- [Deployed Application URL] (#deployed)
-- [Usage](#usa
+- [Usage](#usage)
 - [Tests](#tests)
 - [Contributors](#contributors)
 - [Screenshot](#screenshot)
@@ -51,10 +50,6 @@ ${renderLicenseLink(data.license)}
 ## Installation
 
 ${data.installation}
-
-## Deployed Application URL
-
-${data.deployed}
 
 ## Usage
 

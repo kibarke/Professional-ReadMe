@@ -82,9 +82,24 @@ function init() {
         // Any setup code or initialization tasks can go here
         console.log("Initializing the application...");
         const readmeData = generateMarkdown({ ...responses });
-        const fileName = "README.md";
-        writeFile(fileName, readmeData);
+        const folderName = "Develop";
+        const fileName = folderName + "README.md";
+        ensureDirectoryExistence(fileName); // Ensure that the directory exists before writing the file
+        fs.writeFile(fileName, readmeData, (err) => {
+            if (err) throw err;
+            console.log('README file has been successfully generated and saved to the "develop" folder.');
+        });
     });
+}
+
+// Function to ensure that the directory exists before writing the file
+function ensureDirectoryExistence(filePath) {
+  const dirname = require('path').dirname(filePath);
+  if (fs.existsSync(dirname)) {
+      return true;
+  }
+  ensureDirectoryExistence(dirname);
+  fs.mkdirSync(dirname);
 }
 
 // Function call to initialize app
