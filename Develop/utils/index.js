@@ -18,6 +18,11 @@ const questions = [
   },
   {
     type: "input",
+    name: "installation",
+    message: "How do you install this project?",
+  },
+  {
+    type: "input",
     name: "screenshot",
     message: "Please provide the relative path to the image you want to use as the screenshot."
   },
