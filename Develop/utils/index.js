@@ -44,11 +44,6 @@ const questions = [
   },
   {
     type: "input",
-    name: "features",
-    message: "List some cool features about this project here.",
-  },
-  {
-    type: "input",
     name: "usage",
     message:
       "State the languages or technologies associated with this project.",
