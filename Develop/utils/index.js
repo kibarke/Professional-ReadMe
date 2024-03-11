@@ -51,7 +51,7 @@ const questions = [
   },
   {
     type: "checkbox",
-    name: "test",
+    name: "tests",
     message: "Provide a test if applicable.",
     choices: ["NPM", "Unit", "Integration", "End-to-End", "Functional", "Regression", "Performance", "Securtity", "Smoke", "Sanity", "Acceptance", "Load", "Stress", "Usability", "Compatibility", "Concurrency", "Other", "Non-Applicable"],
   }, 
@@ -83,11 +83,6 @@ function writeFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// Function to move a file to another location
-function moveFile(source, destination) {
-  fs.renameSync(source, destination);
-}
-
 // Function to initialize the application
 function init() {
     inquirer.prompt(questions).then((responses) => {
@@ -95,12 +90,8 @@ function init() {
         console.log("Initializing the application...");
         const readmeData = generateMarkdown({ ...responses });
         const fileName = "README.md";
-        const sourceFile = path.join(process.cwd(), "README.md");
-        const destinationFile = "/path/to/Professional-ReadMe/README.md"; // Replace "/path/to/destination" with the actual destination path
         writeFile(fileName, readmeData);
-        moveFile(sourceFile, destinationFile);
-        console.log("README file moved to the destination.");
-    });
+   });
 }
 
 // Function call to initialize app
