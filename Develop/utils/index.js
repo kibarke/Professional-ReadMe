@@ -57,7 +57,7 @@ const questions = [
   }, 
   {
     type: "input",
-    name: "usage",
+    name: "multi",
     message: "Please list any other language that was included."
   },
   {

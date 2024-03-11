@@ -41,6 +41,7 @@ ${data.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Multi](#multi)
 - [Tests](#tests)
 - [Contributors](#contributors)
 - [Screenshot](#screenshot)
@@ -54,6 +55,10 @@ ${data.installation}
 ## Usage
 
 ${data.usage}
+
+## Multi
+
+${data.multi}
 
 ## Tests
 
