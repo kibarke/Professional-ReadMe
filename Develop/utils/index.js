@@ -43,15 +43,16 @@ const questions = [
     message: "List any project dependencies here.",
   },
   {
-    type: "input",
+    type: "checkbox",
     name: "usage",
     message:
       "State the languages or technologies associated with this project.",
+      choices: ["Javascript", "C", "C++", "C#" ,"Ruby", "Swift", "Go (Golang)", "Rust", "Perl", "Java", "TypeScript", "Dart", "other"]
   },
   {
     type: "input",
-    name: "tests",
-    message: "How do you test it"
+    name: "require",
+    message: "Please list any other language that was included"
   },
   {
     type: "input",
@@ -67,12 +68,13 @@ const questions = [
     type: "input",
     name: "contributors",
     message: "Please list any contributors. (Use GitHub usernames)",
-    default: "",
+    default: "kibarke",
   },
   {
-    type: "input",
+    type: "checkbox",
     name: "test",
-    message: "Provide walkthrough of required tests if applicable.",
+    message: "Provide a test if applicable.",
+    choices: ["NPM", "Unit", "Integration", "End-to-End", "Functional", "Regression", "Performance", "Securtity", "Smoke", "Sanity", "Acceptance", "Load", "Stress", "Usability", "Compatibility", "Concurrency", "Other", "Non-Applicable"],
   },
 ];
 
