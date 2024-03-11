@@ -50,9 +50,15 @@ const questions = [
       choices: ["Javascript", "C", "C++", "C#" ,"Ruby", "Swift", "Go (Golang)", "Rust", "Perl", "Java", "TypeScript", "Dart", "other"]
   },
   {
+    type: "checkbox",
+    name: "test",
+    message: "Provide a test if applicable.",
+    choices: ["NPM", "Unit", "Integration", "End-to-End", "Functional", "Regression", "Performance", "Securtity", "Smoke", "Sanity", "Acceptance", "Load", "Stress", "Usability", "Compatibility", "Concurrency", "Other", "Non-Applicable"],
+  }, 
+  {
     type: "input",
     name: "require",
-    message: "Please list any other language that was included"
+    message: "Please list any other language that was included."
   },
   {
     type: "input",
@@ -68,19 +74,18 @@ const questions = [
     type: "input",
     name: "contributors",
     message: "Please list any contributors. (Use GitHub usernames)",
-    default: "kibarke",
-  },
-  {
-    type: "checkbox",
-    name: "test",
-    message: "Provide a test if applicable.",
-    choices: ["NPM", "Unit", "Integration", "End-to-End", "Functional", "Regression", "Performance", "Securtity", "Smoke", "Sanity", "Acceptance", "Load", "Stress", "Usability", "Compatibility", "Concurrency", "Other", "Non-Applicable"],
+    default: "", 
   },
 ];
 
 // TODO: Create a function to write README file
 function writeFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
+
+// Function to move a file to another location
+function moveFile(source, destination) {
+  fs.renameSync(source, destination);
 }
 
 // Function to initialize the application
@@ -90,7 +95,11 @@ function init() {
         console.log("Initializing the application...");
         const readmeData = generateMarkdown({ ...responses });
         const fileName = "README.md";
+        const sourceFile = path.join(process.cwd(), "README.md");
+        const destinationFile = "/path/to/Professional-ReadMe/README.md"; // Replace "/path/to/destination" with the actual destination path
         writeFile(fileName, readmeData);
+        moveFile(sourceFile, destinationFile);
+        console.log("README file moved to the destination.");
     });
 }
 
