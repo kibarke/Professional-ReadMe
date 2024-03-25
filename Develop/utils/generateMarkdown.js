@@ -18,7 +18,7 @@ function renderLicenseLink(license) {
 
 // Function to render license section of README
 function renderLicenseSection(license) {
-  if (license) {
+  if (!license) {
     return `## License
 
 This project is licensed under the [${license} License](https://opensource.org/licenses/${license}).`;
